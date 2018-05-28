@@ -19,7 +19,12 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <h1>Foo App</h1>
+                <h1>Hands to Hear</h1>
+                <p>A place to learn basic sign language...because 
+                    everyone needs to be heard especially when we 
+                    can't hear them
+                </p>
+
                 {logOutButton}
             </div>
         );
