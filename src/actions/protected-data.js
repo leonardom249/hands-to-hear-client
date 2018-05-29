@@ -2,9 +2,12 @@ import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 
 export const FETCH_PROTECTED_DATA_SUCCESS = 'FETCH_PROTECTED_DATA_SUCCESS';
-export const fetchProtectedDataSuccess = data => ({
+export const fetchProtectedDataSuccess = (correct, incorrect, question, answer, next) => ({
     type: FETCH_PROTECTED_DATA_SUCCESS,
-    data
+    correct,
+    incorrect,
+    question,
+    answer
 });
 
 export const FETCH_PROTECTED_DATA_ERROR = 'FETCH_PROTECTED_DATA_ERROR';
@@ -24,7 +27,13 @@ export const fetchProtectedData = () => (dispatch, getState) => {
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
-        .then(({data}) => dispatch(fetchProtectedDataSuccess(data)))
+        .then((data) => {
+            const correct=data.correct;
+            const incorrect=data.incorrect;
+            const question= data.questions.question.img;
+            const answer= data.questions.question.answer;
+            const next= data.questions.next.next.value.img;
+            return dispatch(fetchProtectedDataSuccess(correct, incorrect, question, answer, next))})
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });

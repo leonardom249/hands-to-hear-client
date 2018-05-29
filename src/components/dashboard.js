@@ -16,7 +16,10 @@ export class Dashboard extends React.Component {
                 </div>
                 <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
+                    Correct: {this.props.correct}
+                    Incorrect: {this.props.incorrect}
+                    Question: <img alt='sign to answer' src={this.props.question} />
+                    Answer: {this.props.answer}
                 </div>
             </div>
         );
@@ -28,7 +31,12 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.fullName}`,
-        protectedData: state.protectedData.data
+        correct: state.protectedData.data.correct,
+        incorrect: state.protectedData.data.incorrect,
+        question: state.protectedData.data.question,
+        answer: state.protectedData.data.answer
+
+
     };
 };
 
