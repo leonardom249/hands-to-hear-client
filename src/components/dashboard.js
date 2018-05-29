@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import Answer  from './answer';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
@@ -11,16 +12,24 @@ export class Dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
+                <div className="dashboard-question">
+                    <img alt='sign to answer' src={this.props.question} />
                 </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
-                <div className="dashboard-protected-data">
-                    Correct: {this.props.correct}
-                    Incorrect: {this.props.incorrect}
-                    Question: <img alt='sign to answer' src={this.props.question} />
-                    Answer: {this.props.answer}
+                <div className='dashboard-ask'>
+                    <h3>What does this sign translate to in written English?</h3>
+                    <p>Correct To Date: {this.props.correct}</p>
+                    <p>Incorrect To Date: {this.props.incorrect}</p>
+                    <form className='next-button'>
+                        <button type='submit'>Next</button>
+                    </form>
                 </div>
+                <div className="dashboard-user-answer">
+                    <form className='user-answer'>
+                        Your Answer: <input type='text' name='user-answer'/>
+                        <button type='submit'>Submit/Show Answer</button>
+                    </form>
+                </div>
+                <Answer/>
             </div>
         );
     }
