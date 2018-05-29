@@ -2,7 +2,7 @@ import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 
 export const FETCH_PROTECTED_DATA_SUCCESS = 'FETCH_PROTECTED_DATA_SUCCESS';
-export const fetchProtectedDataSuccess = (correct, incorrect, question, answer, next) => ({
+export const fetchProtectedDataSuccess = (correct, incorrect, question, answer) => ({
     type: FETCH_PROTECTED_DATA_SUCCESS,
     correct,
     incorrect,
@@ -16,9 +16,14 @@ export const fetchProtectedDataError = error => ({
     error
 });
 
+export const ANSWERED_QUESTION = 'ANSWERED_QUESTION';
+export const answeredQuestion = ()=>({
+    type: ANSWERED_QUESTION
+});
+
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/protected`, {
+    return fetch(`${API_BASE_URL}/questions`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
@@ -28,13 +33,16 @@ export const fetchProtectedData = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
+            console.log(data);
             const correct=data.correct;
             const incorrect=data.incorrect;
-            const question= data.questions.question.img;
-            const answer= data.questions.question.answer;
-            const next= data.questions.next.next.value.img;
-            return dispatch(fetchProtectedDataSuccess(correct, incorrect, question, answer, next))})
+            const question= data.questionHead.img;
+            const answer= data.questionHead.answer;
+            // const next= data.questionNext.next.value.img;
+            return dispatch(fetchProtectedDataSuccess(correct, incorrect, question, answer))})
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });
 };
+
+

@@ -1,11 +1,13 @@
 import {
     FETCH_PROTECTED_DATA_SUCCESS,
-    FETCH_PROTECTED_DATA_ERROR
+    FETCH_PROTECTED_DATA_ERROR,
+    ANSWERED_QUESTION
 } from '../actions/protected-data';
 
 const initialState = {
     data: {},
-    error: null
+    error: null,
+    answered: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -23,6 +25,11 @@ export default function reducer(state = initialState, action) {
     else if (action.type === FETCH_PROTECTED_DATA_ERROR) {
         return Object.assign({}, state, {
             error: action.error
+        });
+    }
+    else if (action.type === ANSWERED_QUESTION) {
+        return Object.assign({}, state, {
+            answered: true
         });
     }
     return state;

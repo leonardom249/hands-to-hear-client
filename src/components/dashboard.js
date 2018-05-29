@@ -10,7 +10,32 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        return (
+        if(this.props.answered===true){
+            return (
+                <div className="dashboard">
+                    <div className="dashboard-question">
+                        <img alt='sign to answer' src={this.props.question} />
+                    </div>
+                    <div className='dashboard-ask'>
+                        <h3>What does this sign translate to in written English?</h3>
+                        <p>Correct To Date: {this.props.correct}</p>
+                        <p>Incorrect To Date: {this.props.incorrect}</p>
+                        <form className='next-button'>
+                            <button type='submit'>Next</button>
+                        </form>
+                    </div>
+                    <div className="dashboard-user-answer">
+                        <form className='user-answer'>
+                            Your Answer: <input type='text' name='user-answer'/>
+                            <button type='submit'>Submit/Show Answer</button>
+                        </form>
+                    </div>
+                    <Answer/>
+                </div>
+            )
+        }
+        else{
+            return (
             <div className="dashboard">
                 <div className="dashboard-question">
                     <img alt='sign to answer' src={this.props.question} />
@@ -29,9 +54,10 @@ export class Dashboard extends React.Component {
                         <button type='submit'>Submit/Show Answer</button>
                     </form>
                 </div>
-                <Answer/>
             </div>
+        
         );
+    }
     }
 }
 
@@ -43,7 +69,7 @@ const mapStateToProps = state => {
         correct: state.protectedData.data.correct,
         incorrect: state.protectedData.data.incorrect,
         question: state.protectedData.data.question,
-        answer: state.protectedData.data.answer
+        answered: state.protectedData.answered
 
 
     };
