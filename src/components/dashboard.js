@@ -1,20 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData, postForNextQuestion} from '../actions/protected-data';
+import {fetchProtectedData} from '../actions/protected-data';
 import Answer  from './answer';
 import  Next  from './next-button';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
-    }
-
-    onSubmit2(){
-        let correct=this.props.correct;
-        let incorrect= this.props.incorrect;
-        this.props.dispatch(postForNextQuestion(correct, incorrect));
-        // this.props.dispatch(turnNextButtonOff());
     }
 
     render() {
