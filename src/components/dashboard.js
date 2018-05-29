@@ -1,12 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchProtectedData, postForNextQuestion} from '../actions/protected-data';
 import Answer  from './answer';
+import  Next  from './next-button';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
+    }
+
+    onSubmit2(){
+        let correct=this.props.correct;
+        let incorrect= this.props.incorrect;
+        this.props.dispatch(postForNextQuestion(correct, incorrect));
+        // this.props.dispatch(turnNextButtonOff());
     }
 
     render() {
@@ -20,9 +28,8 @@ export class Dashboard extends React.Component {
                         <h3>What does this sign translate to in written English?</h3>
                         <p>Correct To Date: {this.props.correct}</p>
                         <p>Incorrect To Date: {this.props.incorrect}</p>
-                        <form className='next-button'>
-                            <button type='submit'>Next</button>
-                        </form>
+
+                        <Next/>
                     </div>
                     <div className="dashboard-user-answer">
                         <form className='user-answer'>
@@ -44,9 +51,7 @@ export class Dashboard extends React.Component {
                     <h3>What does this sign translate to in written English?</h3>
                     <p>Correct To Date: {this.props.correct}</p>
                     <p>Incorrect To Date: {this.props.incorrect}</p>
-                    <form className='next-button'>
-                        <button type='submit'>Next</button>
-                    </form>
+                    <Next/>
                 </div>
                 <div className="dashboard-user-answer">
                     <form className='user-answer'>
