@@ -9,11 +9,20 @@ export function SubmitAnswer(props){
                     <form className='user-answer'
                     onSubmit={e=>{
                         e.preventDefault();
-                        console.log(e.target.userAnswer.value);
-                        props.dispatch(answeredQuestion(e.target.userAnswer.value));
-                        e.target.userAnswer.value=''
+                        const userGuess=e.target.userAnswer.value.toLowerCase();
+                        const answerMatch=props.answer.toLowerCase();
+                        if(answerMatch===userGuess){
+                            props.dispatch(answeredQuestion(userGuess, props.correct+1, props.incorrect));
+                            //maybe need parseInt for props.correct+1?
+                            e.target.userAnswer.value=''
+                        }
+                        else if(answerMatch!== userGuess){
+                            props.dispatch(answeredQuestion(userGuess, props.correct, props.incorrect+1));
+                            //maybe need parseInt for props.incorrect+1?
+                            e.target.userAnswer.value=''
                         }
                       }
+                    }
                     >
                         Your Answer: <input type='text' name='userAnswer'/>
                         <button type='submit'>Submit/Show Answer</button>
@@ -21,6 +30,12 @@ export function SubmitAnswer(props){
         </div>
     )
 }
+const mapStateToProps = state => {
+    return {
+        answer: state.protectedData.data.answer,
+        correct: state.protectedData.data.correct,
+        incorrect: state.protectedData.data.incorrect
+    };
+};
 
-
-export default connect()(SubmitAnswer)
+export default connect(mapStateToProps)(SubmitAnswer)

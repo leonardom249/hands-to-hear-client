@@ -8,7 +8,6 @@ export function Next(props){
         <div className='next-button'> 
                         <button type='submit'
                         onClick={()=>{
-                            console.log('hit')
                             let correct=props.correct;
                             let incorrect=props.incorrect;
                             props.dispatch(postForNextQuestion(correct, incorrect));

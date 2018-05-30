@@ -17,9 +17,11 @@ export const fetchProtectedDataError = error => ({
 });
 
 export const ANSWERED_QUESTION = 'ANSWERED_QUESTION';
-export const answeredQuestion = (userAnswer)=>({
+export const answeredQuestion = (userAnswer, correct, incorrect)=>({
     type: ANSWERED_QUESTION,
-    userAnswer
+    userAnswer,
+    correct,
+    incorrect
 });
 
 export const NEXT = 'NEXT';
@@ -65,7 +67,6 @@ export const postForNextQuestion = (correct, incorrect) => (dispatch, getState) 
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log('helloooo', data);
             const correct=data.correct;
             const incorrect=data.incorrect;
             const question= data.questionHead.img;

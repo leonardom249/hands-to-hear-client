@@ -32,7 +32,13 @@ export default function reducer(state = initialState, action) {
     else if (action.type === ANSWERED_QUESTION) {
         return Object.assign({}, state, {
             answered: true,
-            userAnswer: action.userAnswer
+            userAnswer: action.userAnswer,
+            data:{ 
+                correct: action.correct,
+                incorrect: action.incorrect,
+                question: state.data.question,
+                answer: state.data.answer
+            }
         }); 
     }
     else if (action.type === NEXT) {
