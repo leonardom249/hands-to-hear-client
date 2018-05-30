@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {postForNextQuestion} from '../actions/protected-data';
+import {postForNextQuestion, next} from '../actions/protected-data';
 
 
 export function Next(props){
@@ -12,6 +12,7 @@ export function Next(props){
                             let correct=props.correct;
                             let incorrect=props.incorrect;
                             props.dispatch(postForNextQuestion(correct, incorrect));
+                            props.dispatch(next());
                         }
                     }
                     >Next</button>

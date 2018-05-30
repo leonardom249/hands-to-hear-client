@@ -17,8 +17,14 @@ export const fetchProtectedDataError = error => ({
 });
 
 export const ANSWERED_QUESTION = 'ANSWERED_QUESTION';
-export const answeredQuestion = ()=>({
-    type: ANSWERED_QUESTION
+export const answeredQuestion = (userAnswer)=>({
+    type: ANSWERED_QUESTION,
+    userAnswer
+});
+
+export const NEXT = 'NEXT';
+export const next = ()=>({
+    type: NEXT
 });
 
 export const fetchProtectedData = () => (dispatch, getState) => {

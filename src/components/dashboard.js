@@ -4,6 +4,7 @@ import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
 import Answer  from './answer';
 import  Next  from './next-button';
+import SubmitAnswer from './submit-answer'
 
 export class Dashboard extends React.Component {
     componentDidMount() {
@@ -24,12 +25,6 @@ export class Dashboard extends React.Component {
 
                         <Next/>
                     </div>
-                    <div className="dashboard-user-answer">
-                        <form className='user-answer'>
-                            Your Answer: <input type='text' name='user-answer'/>
-                            <button type='submit'>Submit/Show Answer</button>
-                        </form>
-                    </div>
                     <Answer/>
                 </div>
             )
@@ -44,14 +39,8 @@ export class Dashboard extends React.Component {
                     <h3>What does this sign translate to in written English?</h3>
                     <p>Correct To Date: {this.props.correct}</p>
                     <p>Incorrect To Date: {this.props.incorrect}</p>
-                    <Next/>
                 </div>
-                <div className="dashboard-user-answer">
-                    <form className='user-answer'>
-                        Your Answer: <input type='text' name='user-answer'/>
-                        <button type='submit'>Submit/Show Answer</button>
-                    </form>
-                </div>
+                <SubmitAnswer/>
             </div>
         
         );
