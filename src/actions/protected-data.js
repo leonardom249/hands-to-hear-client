@@ -39,6 +39,7 @@ export const fetchProtectedData = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
+            console.log('get', data)
             const correct=data.correct;
             const incorrect=data.incorrect;
             const question= data.questionHead.img;
@@ -53,14 +54,14 @@ export const postForNextQuestion = (userGuess) => (dispatch, getState) => {
     return fetch(`${API_BASE_URL}/questions`, {
         method: 'POST',
         headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
             // Provide our auth token as credentials
             Authorization: `Bearer ${authToken}`
         },
         body: JSON.stringify({
-           answer:userGuess
+           answer: userGuess
         })
-        //NOTE FOR START OF DAY: doesn't look like it is properly sending over the correct
-        // and incorrect on the body since req.body on server is coming up as an empty obj
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
@@ -87,14 +88,9 @@ export const fetchAnswer = (userGuess) => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log('getting data', data)
             const answer= data.questionHead.answer;
-            console.log(answer)
             return dispatch(answeredQuestion(userGuess, answer))})
-        .then(() => {
-            return dispatch(postForNextQuestion(userGuess))})
         .catch(err => {
             dispatch(fetchProtectedDataError(err));
         });
 };
-
