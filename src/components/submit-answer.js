@@ -11,8 +11,8 @@ export function SubmitAnswer(props){
                     <form className='user-answer'
                     onSubmit={e=>{
                         e.preventDefault();
-                        const userGuess=e.target.userAnswer.value.toLowerCase();
-                        const answerMatch=props.answer.toLowerCase();
+                        const userGuess=e.target.userAnswer.value.toLowerCase().trim();
+                        const answerMatch=props.answer.toLowerCase().trim();
                         if(answerMatch===userGuess){
                             props.dispatch(answeredQuestion(userGuess, props.correct+1, props.incorrect));
                             //maybe need parseInt for props.correct+1?
