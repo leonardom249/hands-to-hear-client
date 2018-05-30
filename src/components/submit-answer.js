@@ -4,6 +4,8 @@ import {answeredQuestion} from '../actions/protected-data';
 
 
 export function SubmitAnswer(props){
+    console.log(props.correct);
+
     return(
         <div className="dashboard-user-answer">
                     <form className='user-answer'
@@ -14,7 +16,9 @@ export function SubmitAnswer(props){
                         if(answerMatch===userGuess){
                             props.dispatch(answeredQuestion(userGuess, props.correct+1, props.incorrect));
                             //maybe need parseInt for props.correct+1?
-                            e.target.userAnswer.value=''
+                            e.target.userAnswer.value='';
+                            console.log(props.correct);
+
                         }
                         else if(answerMatch!== userGuess){
                             props.dispatch(answeredQuestion(userGuess, props.correct, props.incorrect+1));

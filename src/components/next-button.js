@@ -9,7 +9,9 @@ export function Next(props){
                         <button type='submit'
                         onClick={()=>{
                             let correct=props.correct;
+                            console.log(correct);
                             let incorrect=props.incorrect;
+                            console.log(props.incorrect)
                             props.dispatch(postForNextQuestion(correct, incorrect));
                             props.dispatch(next());
                         }

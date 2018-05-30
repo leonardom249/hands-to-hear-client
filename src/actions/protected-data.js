@@ -63,10 +63,13 @@ export const postForNextQuestion = (correct, incorrect) => (dispatch, getState) 
            correct,
            incorrect
         })
+        //NOTE FOR START OF DAY: doesn't look like it is properly sending over the correct
+        // and incorrect on the body since req.body on server is coming up as an empty obj
     })
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
+            console.log('new data', data)
             const correct=data.correct;
             const incorrect=data.incorrect;
             const question= data.questionHead.img;
