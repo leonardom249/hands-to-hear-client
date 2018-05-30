@@ -2,7 +2,9 @@ import {
     FETCH_PROTECTED_DATA_SUCCESS,
     FETCH_PROTECTED_DATA_ERROR,
     ANSWERED_QUESTION,
-    NEXT
+    NEXT,
+    BACK_TO_MAIN,
+    TO_INSTRUCTIONS
 } from '../actions/protected-data';
 
 const initialState = {
@@ -10,7 +12,8 @@ const initialState = {
     error: null,
     answered: false,
     userAnswer:'',
-    answer:''
+    answer:'',
+    instructions: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -41,6 +44,16 @@ export default function reducer(state = initialState, action) {
             answered: false,
             userAnswer:'',
             answer:''
+        }); 
+    }
+    else if (action.type === BACK_TO_MAIN) {
+        return Object.assign({}, state, {
+            instructions: false
+        }); 
+    }
+    else if (action.type === TO_INSTRUCTIONS) {
+        return Object.assign({}, state, {
+            instructions: true
         }); 
     }
     return state;

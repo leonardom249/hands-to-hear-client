@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
+import { toInstructions } from '../actions/protected-data';
 
 export class HeaderBar extends React.Component {
     logOut() {
@@ -17,6 +18,14 @@ export class HeaderBar extends React.Component {
                 <button onClick={() => this.logOut()}>Log out</button>
             );
         }
+
+        let instructionButton;
+        if (this.props.instructions===false && this.props.loggedIn) {
+            instructionButton = (
+                <button onClick={() => this.props.dispatch(toInstructions())}>Instructions</button>
+            );
+        }
+
         return (
             <div className="header-bar">
                 <h1>Hands to Hear</h1>
@@ -24,7 +33,7 @@ export class HeaderBar extends React.Component {
                     everyone needs to be heard especially when we 
                     can't hear them
                 </p>
-
+                {instructionButton}
                 {logOutButton}
             </div>
         );
@@ -32,7 +41,8 @@ export class HeaderBar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
+    loggedIn: state.auth.currentUser !== null,
+    instructions: state.protectedData.instructions
 });
 
 export default connect(mapStateToProps)(HeaderBar);

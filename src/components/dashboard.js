@@ -5,6 +5,8 @@ import {fetchProtectedData} from '../actions/protected-data';
 import  Next  from './next-button';
 import SubmitAnswer from './submit-answer'
 import Count from './count'
+import Instructions from './instructions'
+
 
 export class Dashboard extends React.Component {
     componentDidMount() {
@@ -12,35 +14,42 @@ export class Dashboard extends React.Component {
     }
 
     render() {
-        if(this.props.answered===true){
-            return (
+        if(this.props.instructions===true){
+            return(
+                <Instructions/>
+            )
+        }
+        else{
+            if(this.props.answered===true){
+                return (
+                    <div className="dashboard">
+                        <div className="dashboard-question">
+                            <img alt='sign to answer' src={this.props.question} />
+                        </div>
+                        <div className='dashboard-ask'>
+                            <h3>Answer:</h3>
+                            {this.props.answer}
+                            <Next/>
+                        </div>
+                    </div>
+                )
+            }
+            else{
+                return (
                 <div className="dashboard">
                     <div className="dashboard-question">
                         <img alt='sign to answer' src={this.props.question} />
                     </div>
                     <div className='dashboard-ask'>
-                        <h3>Answer:</h3>
-                        {this.props.answer}
-                        <Next/>
+                        <h3>What does this sign translate to in written English?</h3>
+                    <Count/>
                     </div>
+                    <SubmitAnswer/>
                 </div>
-            )
+            
+            );
+          }
         }
-        else{
-            return (
-            <div className="dashboard">
-                <div className="dashboard-question">
-                    <img alt='sign to answer' src={this.props.question} />
-                </div>
-                <div className='dashboard-ask'>
-                    <h3>What does this sign translate to in written English?</h3>
-                   <Count/>
-                </div>
-                <SubmitAnswer/>
-            </div>
-        
-        );
-    }
     }
 }
 
@@ -51,9 +60,8 @@ const mapStateToProps = state => {
         name: `${currentUser.fullName}`,
         question: state.protectedData.data.question,
         answered: state.protectedData.answered,
-        answer: state.protectedData.answer
-
-
+        answer: state.protectedData.answer,
+        instructions: state.protectedData.instructions
     };
 };
 

@@ -27,6 +27,16 @@ export const next = ()=>({
     type: NEXT
 });
 
+export const TO_INSTRUCTIONS = 'TO_INSTRUCTIONS';
+export const toInstructions = ()=>({
+    type: TO_INSTRUCTIONS
+});
+
+export const BACK_TO_MAIN = 'BACK_TO_MAIN';
+export const backToMain = ()=>({
+    type: BACK_TO_MAIN
+});
+
 export const fetchProtectedData = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     return fetch(`${API_BASE_URL}/questions`, {
