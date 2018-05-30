@@ -11,7 +11,7 @@ export function Answer(props) {
 
 const mapStateToProps = state => {
     return {
-        answer: state.protectedData.data.answer
+        answer: state.protectedData.answer
     };
 };
 

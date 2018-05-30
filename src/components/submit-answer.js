@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {answeredQuestion} from '../actions/protected-data';
+import {fetchAnswer} from '../actions/protected-data';
 
 
 export function SubmitAnswer(props){
@@ -11,20 +11,9 @@ export function SubmitAnswer(props){
                     <form className='user-answer'
                     onSubmit={e=>{
                         e.preventDefault();
-                        const userGuess=e.target.userAnswer.value.toLowerCase().trim();
-                        const answerMatch=props.answer.toLowerCase().trim();
-                        if(answerMatch===userGuess){
-                            props.dispatch(answeredQuestion(userGuess, props.correct+1, props.incorrect));
-                            //maybe need parseInt for props.correct+1?
+                            const userGuess=e.target.userAnswer.value.toLowerCase().trim();
+                            props.dispatch(fetchAnswer(userGuess));
                             e.target.userAnswer.value='';
-                            console.log(props.correct);
-
-                        }
-                        else if(answerMatch!== userGuess){
-                            props.dispatch(answeredQuestion(userGuess, props.correct, props.incorrect+1));
-                            //maybe need parseInt for props.incorrect+1?
-                            e.target.userAnswer.value=''
-                        }
                       }
                     }
                     >

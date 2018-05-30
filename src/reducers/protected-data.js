@@ -9,7 +9,8 @@ const initialState = {
     data: {},
     error: null,
     answered: false,
-    userAnswer:''
+    userAnswer:'',
+    answer:''
 };
 
 export default function reducer(state = initialState, action) {
@@ -19,7 +20,6 @@ export default function reducer(state = initialState, action) {
                 correct: action.correct,
                 incorrect: action.incorrect,
                 question: action.question,
-                answer: action.answer
             },
             error: null
         });
@@ -33,18 +33,14 @@ export default function reducer(state = initialState, action) {
         return Object.assign({}, state, {
             answered: true,
             userAnswer: action.userAnswer,
-            data:{ 
-                correct: action.correct,
-                incorrect: action.incorrect,
-                question: state.data.question,
-                answer: state.data.answer
-            }
+            answer: action.answer
         }); 
     }
     else if (action.type === NEXT) {
         return Object.assign({}, state, {
             answered: false,
-            userAnswer:''
+            userAnswer:'',
+            answer:''
         }); 
     }
     return state;
