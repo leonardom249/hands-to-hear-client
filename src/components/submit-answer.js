@@ -4,7 +4,6 @@ import {fetchAnswer} from '../actions/protected-data';
 
 
 export function SubmitAnswer(props){
-    console.log(props.correct);
 
     return(
         <div className="dashboard-user-answer">

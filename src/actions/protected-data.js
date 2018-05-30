@@ -49,7 +49,6 @@ export const fetchProtectedData = () => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log('get', data)
             const correct=data.correct;
             const incorrect=data.incorrect;
             const question= data.questionHead.img;
@@ -76,7 +75,6 @@ export const postForNextQuestion = (userGuess) => (dispatch, getState) => {
         .then(res => normalizeResponseErrors(res))
         .then(res => res.json())
         .then((data) => {
-            console.log('new data', data)
             const correct=data.correct;
             const incorrect=data.incorrect;
             const question= data.questionHead.img;
