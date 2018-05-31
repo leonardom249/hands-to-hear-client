@@ -72,6 +72,7 @@ body {
     .question-box {
         display: flex;
         flex-direction: row;
+        height: 60vh;
     }
 
     .dashboard-question {
