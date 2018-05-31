@@ -17,7 +17,7 @@ export class Dashboard extends React.Component {
     render() {
         if(this.props.instructions===true){
             return(
-                <Instructions/>
+                <Instructions />
             )
         }
         else{
