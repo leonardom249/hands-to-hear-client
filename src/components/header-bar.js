@@ -4,6 +4,8 @@ import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import { toInstructions } from '../actions/protected-data';
 
+import './header-bar.css';
+
 export class HeaderBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
@@ -29,10 +31,6 @@ export class HeaderBar extends React.Component {
         return (
             <div className="header-bar">
                 <h1>Hands to Hear</h1>
-                <p>A place to learn basic sign language...because 
-                    everyone needs to be heard especially when we 
-                    can't hear them
-                </p>
                 {instructionButton}
                 {logOutButton}
             </div>

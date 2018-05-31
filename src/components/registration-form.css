@@ -1,0 +1,17 @@
+label {
+    color: #f0f0f0;
+}
+
+.form-input {
+    margin-bottom: 20px;
+}
+
+.register-button {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: white;
+    background:#008CBA;
+    width: 120px;
+    height: 25px;
+}

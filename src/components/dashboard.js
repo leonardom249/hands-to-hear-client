@@ -7,6 +7,7 @@ import SubmitAnswer from './submit-answer'
 import Count from './count'
 import Instructions from './instructions'
 
+import './dashboard.css';
 
 export class Dashboard extends React.Component {
     componentDidMount() {

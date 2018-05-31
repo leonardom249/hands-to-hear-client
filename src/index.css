@@ -1,5 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+  font-family: 'Crete Round', serif;
+  color: #ff5f5f;
+  text-shadow: 1px 2px 4px black;
+  font-size: 50px;
+}
+
+ul {
+   list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* unvisited link */
+a:link {
+  color: navy;
+}
+
+/* visited link */
+a:visited {
+  color: navy;
+}
+
+/* mouse over link */
+a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+
+

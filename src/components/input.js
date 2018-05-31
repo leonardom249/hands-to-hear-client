@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './input.css';
+
 export default class Input extends React.Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.meta.active && this.props.meta.active) {
@@ -10,7 +12,10 @@ export default class Input extends React.Component {
     render() {
         let error;
         if (this.props.meta.touched && this.props.meta.error) {
-            error = <div className="form-error">{this.props.meta.error}</div>;
+            error = <div className="form-error">
+                       <img className="error-symbol" src="https://imgur.com/HEIaDeQ.png" alt="Error Symbol"></img>
+                        {this.props.meta.error}
+                    </div>;
         }
 
         let warning;

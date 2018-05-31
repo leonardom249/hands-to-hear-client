@@ -1,7 +1,7 @@
-export const required = value => (value ? undefined : 'Required');
+export const required = value => (value ? undefined : 'Required Field');
 
 export const nonEmpty = value =>
-    value.trim() !== '' ? undefined : 'Cannot be empty';
+    value.trim() !== '' ? undefined : 'Filed cannot be empty';
 
 export const isTrimmed = value =>
     value.trim() === value ? undefined : 'Cannot start or end with whitespace';
@@ -17,4 +17,4 @@ export const length = length => value => {
 export const matches = field => (value, allValues) =>
     field in allValues && value.trim() === allValues[field].trim()
         ? undefined
-        : 'Does not match';
+        : 'Your password does not match';
