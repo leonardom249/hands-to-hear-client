@@ -14,7 +14,7 @@ body {
     .dashboard-question {
         background-color: #8aae92;
         padding: 45px 50px;
-        width: 100%;
+        width: 100vw;
     }
   
     .dashboard-ask {
@@ -22,7 +22,7 @@ body {
       color: #f0f0f0;
       background-color: #616161;
       padding: 58px 50px;
-      width: 100%;
+      width: 100vw;
     }
 }
 
@@ -38,7 +38,7 @@ body {
     .dashboard-question {
         background-color: #8aae92;
         padding: 45px 50px;
-        width: 100%;
+        width: 100vw;
     }
   
     .dashboard-ask {
@@ -46,7 +46,7 @@ body {
       color: #f0f0f0;
       background-color: #616161;
       padding: 58px 50px;
-      width: 100%;
+      width: 100vw;
     }
   }
 
@@ -77,7 +77,7 @@ body {
     .dashboard-question {
         background-color: #8aae92;
         padding: 58px 50px;
-        width: 50%;
+        width: 50vw;
     }
   
     .dashboard-ask {
@@ -85,6 +85,6 @@ body {
       color: #f0f0f0;
       background-color: #616161;
       padding: 58px 50px;
-      width: 50%;
+      width: 50vw;
     }
   }
