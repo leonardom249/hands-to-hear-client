@@ -11,3 +11,17 @@ img {
     max-width: 10%;
     max-height: 10%;
   }
+
+  .question-box {
+      background-color: #ef7b7b;
+      padding: 200px 100px;
+      width: 50%;
+      display: inline-block;
+  }
+
+  .dashboard-ask {
+    background-color: #645c84;
+    padding: 200px 100px;
+    width: 50%;
+    display: inline-block;
+  }

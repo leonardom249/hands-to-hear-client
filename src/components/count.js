@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import './count.css';
+
 export function Count(props) {
     return (
         <div className="correct-incorrect-counts">

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
 import LoginForm from './login-form';
+
 import './landing-page.css';
 
 export function LandingPage(props) {
@@ -12,9 +13,9 @@ export function LandingPage(props) {
     }
 
     return (
-        <div>
-            <p>A place to learn basic sign language...</p>
-            <p>because everyone needs to be heard.</p>
+        <div className="landing">
+            <p className="landing-p">A place to learn basic sign language...</p>
+            <p className="landing-p">because everyone needs to be heard.</p>
             <div className="home">
                 <div className="overlay"></div>
                 <div className="overlay2"></div>
