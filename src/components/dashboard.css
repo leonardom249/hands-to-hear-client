@@ -53,6 +53,7 @@ body {
   @media screen and (min-width: 960px) {
     .dashboard {
         width: 100%;
+        position: absolute;
     }
 
     img {
