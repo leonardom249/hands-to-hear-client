@@ -2,35 +2,89 @@ body {
     background-color: #f4f9f4;
 }
 
-img {
-    /* width: 40%; */
-    height: 40%;
-  }
+@media screen and (min-width: 320px) {
+    img {
+        width: 25%;
+    }
 
-  .question-box {
-      display: flex;
-      justify-content: space-between;
-  }
+    .question-box {
+        flex-direction: column;
+    }
 
-  .dashboard-question h3 {
+    .dashboard-question {
+        background-color: #8aae92;
+        padding: 45px 50px;
+        width: 100%;
+    }
+  
+    .dashboard-ask {
       text-align: center;
+      color: #f0f0f0;
+      background-color: #616161;
+      padding: 58px 50px;
+      width: 100%;
+    }
+}
+
+  @media screen and (min-width: 640px) {
+    img {
+        width: 15%;
+    }
+
+    .question-box {
+        flex-direction: column;
+    }
+
+    .dashboard-question {
+        background-color: #8aae92;
+        padding: 45px 50px;
+        width: 100%;
+    }
+  
+    .dashboard-ask {
+      text-align: center;
+      color: #f0f0f0;
+      background-color: #616161;
+      padding: 58px 50px;
+      width: 100%;
+    }
   }
 
-  .dashboard-question {
-      background-color: #8aae92;
-      padding: 89px 50px;
+  @media screen and (min-width: 960px) {
+    .dashboard {
+        width: 100%;
+    }
+
+    img {
+        width: 25%;
+    }
+
+    .dashboard-question h3 {
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .dashboard-ask h3 {
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .question-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dashboard-question {
+        background-color: #8aae92;
+        padding: 58px 50px;
+        width: 50%;
+    }
+  
+    .dashboard-ask {
+      text-align: center;
+      color: #f0f0f0;
+      background-color: #616161;
+      padding: 58px 50px;
       width: 50%;
-  }
-
-  .dashboard-ask {
-    text-align: center;
-    color: #f0f0f0;
-    background-color: #616161;
-    padding: 58px 50px;
-    width: 50%;
-  }
-
-  .dashboard-ask h3 {
-      text-align: center;
-      margin: 5px 0;
+    }
   }

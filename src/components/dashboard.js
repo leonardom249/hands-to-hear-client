@@ -43,7 +43,7 @@ export class Dashboard extends React.Component {
                     <Count/>
                     <div className="question-box">
                         <div className="dashboard-question">
-                            <h3>What does this sign translate to in written English?</h3>
+                            <h3>What Letter is this?</h3>
                             <img alt='sign to answer' src={this.props.question} />
                         </div>
                         <div className='dashboard-ask'>
