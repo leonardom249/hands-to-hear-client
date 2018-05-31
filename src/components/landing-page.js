@@ -22,7 +22,7 @@ export function LandingPage(props) {
                 <h2>Welcome Back to Hands to Hear!</h2>
                 <LoginForm />
             </div>
-            <Link to="/register">New to Hands to Hear? Click to create an account</Link>
+            <Link to="/register">Create an account</Link>
         </div>
     );
 }
