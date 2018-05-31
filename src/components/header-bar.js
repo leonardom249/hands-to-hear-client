@@ -4,8 +4,6 @@ import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import { toInstructions } from '../actions/protected-data';
 
-import './header-bar.css';
-
 export class HeaderBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
