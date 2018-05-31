@@ -12,9 +12,10 @@ export function Next(props){
                             onClick={()=>{
                                 props.dispatch(postForNextQuestion(props.userGuess));
                                 props.dispatch(next());
-                        }
-                    }
-                    >Next</button>
+                            }
+                            }
+                            >Next
+                        </button>
         </div>
     )
 }

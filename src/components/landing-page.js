@@ -20,7 +20,6 @@ export function LandingPage(props) {
                 <div className="overlay"></div>
                 <div className="overlay2"></div>
                 <h2>Welcome Back to Hands to Hear!</h2>
-                {/* <h3>Please Login to Continue Your Learning Experience.</h3> */}
                 <LoginForm />
             </div>
             <Link to="/register">New to Hands to Hear? Click to create an account</Link>

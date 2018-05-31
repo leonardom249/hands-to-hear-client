@@ -19,7 +19,6 @@ export function RegistrationPage(props) {
             <div className="overlay2"></div>
             <div className="home">
                 <h2>Join the movement to hear everyone!</h2>
-                {/* <h3>Please Create an Account to Start Learning.</h3> */}
                 <RegistrationForm />
             </div>
             <Link to="/">Already have an account? Click to Login</Link>
