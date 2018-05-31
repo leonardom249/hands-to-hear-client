@@ -1,5 +1,10 @@
 body {
-    background-color: #eeeeee;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    text-align: left;
+    margin-left: 100px;
 }
 
 img {

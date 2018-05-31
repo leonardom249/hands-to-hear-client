@@ -38,12 +38,12 @@ export class Dashboard extends React.Component {
             else{
                 return (
                 <div className="dashboard">
+                <Count/>
+                <h3>What does this sign translate to in written English?</h3>
                     <div className="dashboard-question">
                         <img alt='sign to answer' src={this.props.question} />
                     </div>
                     <div className='dashboard-ask'>
-                        <h3>What does this sign translate to in written English?</h3>
-                    <Count/>
                     </div>
                     <SubmitAnswer/>
                 </div>

@@ -12,9 +12,10 @@ body {
 
 h1 {
   font-family: 'Crete Round', serif;
-  color: #ff5f5f;
+  color: #fc3c3c;
   text-shadow: 1px 2px 4px black;
   font-size: 50px;
+  margin: 0 0;
 }
 
 ul {

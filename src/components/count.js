@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 export function Count(props) {
     return (
         <div className="correct-incorrect-counts">
-            <p>Correct To Date: {props.correct}</p>
+            <p>Correct To Date: {props.correct}</p> 
             <p>Incorrect To Date: {props.incorrect}</p>
         </div>
     );

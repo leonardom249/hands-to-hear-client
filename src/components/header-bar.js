@@ -4,6 +4,8 @@ import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
 import { toInstructions } from '../actions/protected-data';
 
+import './header-bar.css';
+
 export class HeaderBar extends React.Component {
     logOut() {
         this.props.dispatch(clearAuth());
@@ -15,22 +17,24 @@ export class HeaderBar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
-                <button onClick={() => this.logOut()}>Log out</button>
+                <button className="logout-button"
+                  onClick={() => this.logOut()}>Log out</button>
             );
         }
 
         let instructionButton;
         if (this.props.instructions===false && this.props.loggedIn) {
             instructionButton = (
-                <button onClick={() => this.props.dispatch(toInstructions())}>Instructions</button>
+                <button className="instruction-button"
+                  onClick={() => this.props.dispatch(toInstructions())}>Instructions</button>
             );
         }
 
         return (
             <div className="header-bar">
+                {logOutButton}
                 <h1>Hands to Hear</h1>
                 {instructionButton}
-                {logOutButton}
             </div>
         );
     }
