@@ -24,13 +24,15 @@ export class Dashboard extends React.Component {
             if(this.props.answered===true){
                 return (
                     <div className="dashboard">
+                    <div className="question-box">
                         <div className="dashboard-question">
                             <img alt='sign to answer' src={this.props.question} />
                         </div>
                         <div className='dashboard-ask'>
-                            <h3>Answer:</h3>
-                            {this.props.answer}
+                            <h3>Correct Answer:</h3>
+                            "{this.props.answer}"
                             <Next/>
+                        </div>
                         </div>
                     </div>
                 )
@@ -40,13 +42,13 @@ export class Dashboard extends React.Component {
                 <div className="dashboard">
                     <Count/>
                     <div className="question-box">
-                        <h3>What does this sign translate to in written English?</h3>
                         <div className="dashboard-question">
+                            <h3>What does this sign translate to in written English?</h3>
                             <img alt='sign to answer' src={this.props.question} />
                         </div>
-                    </div>
-                    <div className='dashboard-ask'>
-                        <SubmitAnswer/>
+                        <div className='dashboard-ask'>
+                            <SubmitAnswer/>
+                        </div>
                     </div>
                 </div>
             

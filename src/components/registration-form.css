@@ -7,11 +7,12 @@ label {
 }
 
 .register-button {
+    font-size: 1em;
     text-align: center;
     border: 1px solid gray;
     border-radius: 5px;
     color: white;
     background:#008CBA;
     width: 120px;
-    height: 25px;
+    height: 40px;
 }

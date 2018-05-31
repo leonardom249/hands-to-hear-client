@@ -2,14 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {next, postForNextQuestion} from '../actions/protected-data';
 
+import './next-button.css';
 
 export function Next(props){
     return(
-        <div className='next-button'> 
-                        <button type='submit'
-                        onClick={()=>{
-                            props.dispatch(postForNextQuestion(props.userGuess));
-                            props.dispatch(next());
+        <div className='next-button-container'> 
+                        <button className="next-button"
+                            type='submit'
+                            onClick={()=>{
+                                props.dispatch(postForNextQuestion(props.userGuess));
+                                props.dispatch(next());
                         }
                     }
                     >Next</button>

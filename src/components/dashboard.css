@@ -1,27 +1,36 @@
 body {
-    background-color: #f4f4f4;
-}
-
-.dashboard {
-    text-align: left;
-    margin-left: 100px;
+    background-color: #f4f9f4;
 }
 
 img {
-    max-width: 10%;
-    max-height: 10%;
+    /* width: 40%; */
+    height: 40%;
   }
 
   .question-box {
-      background-color: #ef7b7b;
-      padding: 200px 100px;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .dashboard-question h3 {
+      text-align: center;
+  }
+
+  .dashboard-question {
+      background-color: #8aae92;
+      padding: 89px 50px;
       width: 50%;
-      display: inline-block;
   }
 
   .dashboard-ask {
-    background-color: #645c84;
-    padding: 200px 100px;
+    text-align: center;
+    color: #f0f0f0;
+    background-color: #616161;
+    padding: 58px 50px;
     width: 50%;
-    display: inline-block;
+  }
+
+  .dashboard-ask h3 {
+      text-align: center;
+      margin: 5px 0;
   }

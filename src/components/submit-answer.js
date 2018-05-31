@@ -2,23 +2,29 @@ import React from 'react';
 import {connect} from 'react-redux'
 import {fetchAnswer} from '../actions/protected-data';
 
+import './submit-answer.css';
 
 export function SubmitAnswer(props){
 
     return(
         <div className="dashboard-user-answer">
-                    <form className='user-answer'
+            <div className="answer-container">
+                <form 
+                    className='user-answer'
                     onSubmit={e=>{
                         e.preventDefault();
-                            const userGuess=e.target.userAnswer.value.toLowerCase().trim();
-                            props.dispatch(fetchAnswer(userGuess));
-                            e.target.userAnswer.value='';
-                      }
-                    }
-                    >
-                        Your Answer: <input type='text' name='userAnswer'/>
-                        <button type='submit'>Submit/Show Answer</button>
-                    </form>
+                        const userGuess=e.target.userAnswer.value.toLowerCase().trim();
+                        props.dispatch(fetchAnswer(userGuess));
+                        e.target.userAnswer.value='';
+                        } 
+                    }>
+                    Your Answer: <br />
+                    <input className="user-answer-input" type='text' name='userAnswer'/> <br />
+                    <button className="submit-answer-button"
+                        type='submit'>Submit Answer
+                    </button>
+                </form>
+            </div>
         </div>
     )
 }

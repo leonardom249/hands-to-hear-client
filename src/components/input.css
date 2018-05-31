@@ -3,12 +3,13 @@ input {
     background-color: lightgray;
     margin: 2px;
     padding: 5px;
-    width: 25%;
+    width: 55%;
     direction: ltr;
 }
 
 .form-error {
-  color: #cd5554;
+  color: black;
+  font-weight: bold; 
   font-size: 15px;
 }
 

@@ -2,3 +2,7 @@
     color: black;
     text-shadow: none;
 }
+
+.correct-incorrect-counts {
+    text-align: center;
+}

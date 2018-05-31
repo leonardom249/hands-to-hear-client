@@ -1,8 +1,9 @@
 .login-button {
+    font-size: 1em;
     border: 1px solid gray;
     border-radius: 5px;
     color: white;
     background: #4CAF50;
     width: 120px;
-    height: 25px;
+    height: 40px;
 }
