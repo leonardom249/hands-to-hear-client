@@ -53,11 +53,10 @@ body {
   @media screen and (min-width: 960px) {
     .dashboard {
         width: 100%;
-        position: absolute;
     }
 
     img {
-        width: 25%;
+        width: 23%;
     }
 
     .dashboard-question h3 {
