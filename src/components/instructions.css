@@ -43,8 +43,10 @@
         height: 25px;
 }
 
-p {
+.instructions p {
     text-align: center;
+    color: #f0f0f0;
+    text-shadow: 1px 2px 2px black;
 }
 
 li {

@@ -21,8 +21,8 @@ export function LandingPage(props) {
                 <div className="overlay2"></div>
                 <h2>Welcome Back to Hands to Hear!</h2>
                 <LoginForm />
+                <Link to="/register">Create an account</Link>
             </div>
-            <Link to="/register">Create an account</Link>
         </div>
     );
 }
