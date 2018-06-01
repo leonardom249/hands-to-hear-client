@@ -6,6 +6,10 @@
     padding: 15px 0;
 }
 
+.landing {
+    flex-grow: 2;
+}
+
 .home h2, .home h3 {
     color: #f0f0f0;
 }
