@@ -20,7 +20,7 @@ As long as the user remains active on the page, their authentication will automa
 
 ### Link to Deployed Version:
 [Hands to Hear](https://compassionate-fermi-44db9e.netlify.com/)
--Demo Account: username: demo password: demo1234
+-Demo Account: username: Demo password: demo1234
 
 ### Brief Overview of Components:
 
