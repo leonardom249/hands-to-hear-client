@@ -20,6 +20,7 @@ As long as the user remains active on the page, their authentication will automa
 
 ### Link to Deployed Version:
 [Hands to Hear](https://compassionate-fermi-44db9e.netlify.com/)
+-Demo Account: username: demo password: demo1234
 
 ### Brief Overview of Components:
 
@@ -37,12 +38,6 @@ As long as the user remains active on the page, their authentication will automa
 
 #### Main Page (Route='/dashboard'):
     -Main Page Main Component: src/components/dashboard.js
-    -Header: src/components/header.js
-    -Instruction Button: src/components/button.js
-    -Create New Recipe Button: src/components/create-button.js
-    -Logout Button: src/components/logout-button.js
-    -Recipe Form: src/components/form.js
-    -Recipe List (Saved Recipes): src/components/recipe-list.js
 
 #### Instruction Page:
     -Instruction Text: src/components/instructions.js
