@@ -14,9 +14,10 @@
     color: #f0f0f0;
 }
 
-.landing-p {
-    color: #f0f0f0;
+.landing .landing-p {
+    color: black;
     text-shadow: 1px 2px 4px black;
+    font-weight: bold;
 }
 
 .overlay {
