@@ -26,11 +26,11 @@ export class Dashboard extends React.Component {
                     <div className="dashboard">
                     <div className="question-box">
                         <div className="dashboard-question">
-                            <img alt='sign to answer' src={this.props.question} />
+                            <img className="question-image2" alt='sign to answer' src={this.props.question} />
                         </div>
                         <div className='dashboard-ask'>
                             <h3>Correct Answer:</h3>
-                            "{this.props.answer}"
+                            <p className="correct-answer">"{this.props.answer}"</p>
                             <Next/>
                         </div>
                         </div>
@@ -42,15 +42,14 @@ export class Dashboard extends React.Component {
                 <div className="dashboard">
                     <div className="question-box">
                         <div className="dashboard-question">
-                            <h3>What Letter is this?</h3>
-                            <img alt='sign to answer' src={this.props.question} />
+                            <h3 className="ask">What Letter is this?</h3>
+                            <img className="question-image" alt='sign to answer' src={this.props.question} />
+                            <Count/>
                         </div>
                         <div className='dashboard-ask'>
                             <SubmitAnswer/>
                         </div>
                     </div>
-                    <Count/>
-
                 </div>
             
             );

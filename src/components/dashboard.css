@@ -2,6 +2,29 @@ body {
     background-color: #f4f9f4;
 }
 
+.correct-answer{
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+.dashboard-question {
+    min-height: 300px;
+    height: 100%
+}
+
+.question-image{
+    margin-top: 10px;
+}
+
+.question-image2{
+    margin-top: 50px;
+}
+
+.ask{
+    padding-top: 20px;
+}
+
 @media screen and (min-width: 320px) {
     img {
         width: 25%;
@@ -13,7 +36,6 @@ body {
 
     .dashboard-question {
         background-color: #8aae92;
-        padding: 45px 50px;
         width: 100vw;
     }
   
@@ -39,6 +61,7 @@ body {
         background-color: #8aae92;
         padding: 45px 50px;
         width: 100vw;
+        min-height: 400px;
     }
   
     .dashboard-ask {
@@ -47,6 +70,7 @@ body {
       background-color: #616161;
       padding: 58px 50px;
       width: 100vw;
+      min-height: 400px;
     }
   }
 
@@ -79,6 +103,8 @@ body {
         background-color: #8aae92;
         padding: 58px 50px;
         width: 50vw;
+        min-height: 500px;
+
     }
   
     .dashboard-ask {
@@ -87,5 +113,7 @@ body {
       background-color: #616161;
       padding: 58px 50px;
       width: 50vw;
+      min-height: 500px;
+
     }
   }

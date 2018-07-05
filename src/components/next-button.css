@@ -2,8 +2,9 @@
     color: #f6f6f6;
     border: none;
     background-color: #2c365d;
-    font-size: 10px;
+    font-size: 18px;
     padding: 5px 35px;
+    margin-top: 10px;
     border-radius: 5px;
-    height: 25px;
+    height: 100%;
 }
