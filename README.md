@@ -6,6 +6,7 @@ Deployed backend found here: [Deployed Backend](https://alex-megan-spaced-repeti
 ## Table of Contents:
 * Description
 * Link to Deployed Version
+* Screenshots
 * Brief Overview of Components
 * Instructions
 
@@ -23,6 +24,12 @@ As long as the user remains active on the page, their authentication will automa
 * Demo Account: 
     username: Demo 
     password: demo1234
+
+### Screenshots:
+
+![hth](https://user-images.githubusercontent.com/35779012/42341802-e9ca0ef6-8059-11e8-889f-110e497e9280.jpg)
+
+![h2h-instructions](https://user-images.githubusercontent.com/35779012/42341799-e7db2c74-8059-11e8-8eb8-2033adc1e460.jpg)
 
 ![h-2-h](https://user-images.githubusercontent.com/35779012/42341108-8dfc8506-8057-11e8-8aa9-3b7757bce5a0.jpg)
 
