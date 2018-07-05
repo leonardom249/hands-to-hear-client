@@ -19,7 +19,7 @@ As a user, you are able to register, login, logout, answer questions, view corre
 As long as the user remains active on the page, their authentication will automatically refresh just before every hour (JWT expires in an hour on backend side unless refreshed), allowing the user to remain on the main page until they are ready to logout for the day.
 
 ### Link to Deployed Version:
-[Hands to Hear](https://compassionate-fermi-44db9e.netlify.com/)
+[Hands to Hear](https://hands-to-hear.netlify.com/)
 * Demo Account: 
     username: Demo 
     password: demo1234
