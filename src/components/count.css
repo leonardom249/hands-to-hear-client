@@ -1,6 +1,7 @@
 .correct-incorrect-counts p {
     color: black;
     text-shadow: none;
+    margin: 0;
 }
 
 .correct-incorrect-counts {
