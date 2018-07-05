@@ -40,7 +40,6 @@ export class Dashboard extends React.Component {
             else{
                 return (
                 <div className="dashboard">
-                    <Count/>
                     <div className="question-box">
                         <div className="dashboard-question">
                             <h3>What Letter is this?</h3>
@@ -50,6 +49,8 @@ export class Dashboard extends React.Component {
                             <SubmitAnswer/>
                         </div>
                     </div>
+                    <Count/>
+
                 </div>
             
             );

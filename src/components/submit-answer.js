@@ -21,7 +21,7 @@ export function SubmitAnswer(props){
                     Your Answer: <br />
                     <input className="user-answer-input" type='text' name='userAnswer'/> <br />
                     <button className="submit-answer-button"
-                        type='submit'>Submit Answer
+                        type='submit'>Submit
                     </button>
                 </form>
             </div>
