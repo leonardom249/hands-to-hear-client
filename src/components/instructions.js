@@ -15,8 +15,8 @@ export function Instructions(props) {
                     <li>If Your Answer Is Incorrect <br /> Your incorrect score will go up.</li> <br />
                     <li>Your Progress Will Automatically Be Saved</li> <br />
                 </ul>
-                <p><em>Thank you for using "Hands to Hear". We hope you enjoy learning ASL (American Sign Language) and continue your learning experience so everyone can be heard!</em></p> <br /> 
-            </div>
+                <p className="thanks"><em>Thank you for using "Hands to Hear". We hope you enjoy learning ASL (American Sign Language) and continue your learning experience so everyone can be heard!</em></p> <br /> 
+            
             <button className="instructions-button"
                 type='submit'
                 onClick={()=>{
@@ -25,6 +25,7 @@ export function Instructions(props) {
                 }
                 >Back
             </button>
+            </div>
      </div>
     );
 }

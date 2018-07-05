@@ -4,16 +4,23 @@
     padding: 0;
 }
 
-@media screen and (min-width: 320px) {
+.thanks{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
     .instructions {
         background-color: #616161;
         color: #f0f0f0;
         text-align: center;
         margin: 0 auto;
+        min-height: 500px;
+        height: 100%;
+        z-index: 1;
         width: 100%;
         padding: 2px 0px;
     }
-}
+
 
 @media screen and (min-width: 640px) {
     .instructions {
@@ -23,7 +30,6 @@
         margin: 0 auto;
         width: 80vw;
         padding: 2px 0px;
-        height: 80vh;
     }
 }
 
@@ -35,7 +41,6 @@
         margin: 0 auto;
         width: 80vw;
         padding: 2px 0px;
-        height: 80vh;
     }
 }
 
