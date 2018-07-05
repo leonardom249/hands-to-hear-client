@@ -4,10 +4,10 @@ Node.js backend repo found here: [Hands to Hear Github](https://github.com/think
 Deployed backend found here: [Deployed Backend](https://alex-megan-spaced-repetition.herokuapp.com/)
 
 ## Table of Contents:
--Description
--Link to Deployed Version
--Brief Overview of Components
--Instructions
+* Description
+* Link to Deployed Version
+* Brief Overview of Components
+* Instructions
 
 ### Description:
 Hands to Hear is a web app created to aid those seeking to learn American Sign Language (ASL), a skill most people need, but lack, today. The app to date contains the entire ASL alphabet with plans to expand to other common use words.
@@ -20,7 +20,9 @@ As long as the user remains active on the page, their authentication will automa
 
 ### Link to Deployed Version:
 [Hands to Hear](https://hands-to-hear.netlify.com/)
--Demo Account: username: Demo password: demo1234
+* Demo Account: 
+    username: Demo 
+    password: demo1234
 
 ![h-2-h](https://user-images.githubusercontent.com/35779012/42341108-8dfc8506-8057-11e8-8aa9-3b7757bce5a0.jpg)
 
