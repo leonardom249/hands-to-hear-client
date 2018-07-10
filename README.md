@@ -9,6 +9,7 @@ Deployed backend found here: [Deployed Backend](https://alex-megan-spaced-repeti
 * Screenshots
 * Brief Overview of Components
 * Instructions
+* Tech Used
 
 ### Description:
 Hands to Hear is a web app created to aid those seeking to learn American Sign Language (ASL), a skill most people need, but lack, today. The app to date contains the entire ASL alphabet with plans to expand to other common use words.
@@ -79,4 +80,21 @@ As long as the user remains active on the page, their authentication will automa
                 }
               }
     -run "npm start" to start dev client (default: localhost:3000)
+    
+### Tech Used:
+
+#### Front-End
+* React
+* Redux
+* HTML
+* CSS
+
+#### Back-End
+* Node
+* Express
+* MongoDB
+* Mongoose
+* Passport
+* Bcrypt
+
     
